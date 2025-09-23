@@ -34,7 +34,7 @@ export const Header = () => {
               asChild
             >
               <a
-                href="https://docs.lovable.dev"
+                href="https://docs.gitlab.com/topics/cron/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
