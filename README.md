@@ -1,7 +1,4 @@
-
-# Save the generated README content into a text file
-
-readme_content = """# ⏰ Cron Job Helper
+# ⏰ Cron Job Helper
 
 Cron Job Helper is a simple and intuitive web app built with **HTML, CSS, and JavaScript (React + Tailwind + shadcn/ui)** that helps developers quickly build, understand, and apply cron expressions.  
 It provides **ready-to-use templates** (like "Every 5 minutes", "Daily at Midnight", etc.) as well as a **custom cron builder** for advanced scheduling.
@@ -85,3 +82,27 @@ You should use **Cron Job Helper** when:
 4. Copy it into your system:
    ```bash
    crontab -e
+   ```
+5. Paste your cron expression, save, and exit.
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **Frontend:** React, TailwindCSS, shadcn/ui, Lucide Icons
+- **Language:** TypeScript
+- **Deployment:** Vercel / Netlify (or any static hosting)
+
+---
+
+
+## 📜 License
+
+This project is open-source under the [MIT License](LICENSE).
+
+---
+
+## 🙌 Contributing
+
+Contributions are welcome!  
+If you have ideas, feel free to **open an issue** or **submit a pull request**.
