@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Copy, Play, Calendar, Timer } from "lucide-react";
+import { Header } from "./layout/Header";
+import { Footer } from "./layout/Footer";
 import { CronInputs } from "./cron/CronInputs";
 import { CronOutput } from "./cron/CronOutput";
 import { CronTemplates } from "./cron/CronTemplates";
@@ -59,8 +61,9 @@ const CronBuilder = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-hero p-4">
-      <div className="max-w-6xl mx-auto space-y-8">
+    <div className="min-h-screen bg-gradient-hero">
+      <Header />
+      <div className="max-w-6xl mx-auto p-4 space-y-8">
         {/* Header */}
         <div className="text-center py-8">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -144,6 +147,7 @@ const CronBuilder = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
