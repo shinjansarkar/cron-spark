@@ -103,15 +103,7 @@ export const Footer = () => {
                 className="w-full justify-start"
                 asChild
               >
-                <a
-                  href="https://docs.lovable.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Coffee className="w-4 h-4 text-amber-600" />
-                  Built with Lovable
-                </a>
+
               </Button>
             </div>
           </div>
