@@ -15,6 +15,8 @@ It provides **ready-to-use templates** (like "Every 5 minutes", "Daily at Midnig
 
 https://github.com/shinjansarkar/cron-spark/blob/main/assets/demo.mp4
 
+![Cron Job Helper Demo Video](assets/demo.mp4)
+
 > ⚡ Note: GitHub doesn’t autoplay videos inside README, but clicking the link will open the video in the browser.  
 > Alternatively, you can upload the video to **GitHub Releases** or **YouTube** and embed the link here.
 
