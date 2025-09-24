@@ -5,8 +5,22 @@ It provides **ready-to-use templates** (like "Every 5 minutes", "Daily at Midnig
 
 ---
 
-## 🚀 Why Cron Job Helper?
+## 📸 Screenshot
 
+![Cron Job Helper Screenshot](assets/screenshot.png)
+
+---
+
+## 🎥 Demo Video
+
+https://github.com/shinjansarkar/cron-spark/blob/main/assets/demo.mp4
+
+> ⚡ Note: GitHub doesn’t autoplay videos inside README, but clicking the link will open the video in the browser.  
+> Alternatively, you can upload the video to **GitHub Releases** or **YouTube** and embed the link here.
+
+---
+
+## 🚀 Why Cron Job Helper?
 Managing **cron jobs** can be confusing, especially for beginners:
 - Cron syntax is **tricky** (`0 0 * * *` vs `*/5 * * * *`).
 - Developers often forget which field means **minute/hour/day/month/week**.
@@ -82,7 +96,7 @@ You should use **Cron Job Helper** when:
 4. Copy it into your system:
    ```bash
    crontab -e
-   ```
+
 5. Paste your cron expression, save, and exit.
 
 ---
