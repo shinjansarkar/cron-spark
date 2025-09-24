@@ -98,7 +98,7 @@ interface CronTemplatesProps {
 export const CronTemplates = ({ onApply }: CronTemplatesProps) => {
   return (
     <div className="w-full">
-      <div className="flex flex-col gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-x-0">
         {TEMPLATES.map((template, index) => (
           <Card
             key={index}

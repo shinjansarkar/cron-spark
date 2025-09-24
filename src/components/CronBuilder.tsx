@@ -113,17 +113,7 @@ const CronBuilder = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card border-0 shadow-lg">
-              <CardHeader className="pb-4">
-                <CardTitle className="flex items-center gap-2 text-xl">
-                  <Play className="w-5 h-5 text-cron-accent" />
-                  Quick Templates
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CronTemplates onApply={applyTemplate} />
-              </CardContent>
-            </Card>
+            {/* Quick Templates moved to full-bleed section below */}
           </div>
 
           {/* Right Column - Output */}
@@ -145,6 +135,17 @@ const CronBuilder = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </div>
+
+      {/* Full-bleed Quick Templates Section */}
+      <div className="w-screen mx-[calc(50%-50vw)] py-6">
+        <div className="max-w-7xl mx-auto p-4">
+          <div className="flex items-center gap-2 text-xl mb-4">
+            <Play className="w-5 h-5 text-cron-accent" />
+            Quick Templates
+          </div>
+          <CronTemplates onApply={applyTemplate} />
         </div>
       </div>
       <Footer />
