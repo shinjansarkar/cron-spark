@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Calendar, Zap, Timer } from "lucide-react";
 import type { CronSettings } from "../CronBuilder";
+import { useEffect, useRef, useState } from "react";
 
 interface Template {
   name: string;
@@ -96,6 +97,25 @@ interface CronTemplatesProps {
 }
 
 export const CronTemplates = ({ onApply }: CronTemplatesProps) => {
+  const [appliedIndex, setAppliedIndex] = useState<number | null>(null);
+  const timeoutRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const triggerApplied = (index: number) => {
+    // show the applied state briefly
+    setAppliedIndex(index);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    // clear after 600ms
+    timeoutRef.current = window.setTimeout(() => setAppliedIndex(null), 600);
+  };
+
   return (
     <div className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-x-0">
@@ -103,7 +123,10 @@ export const CronTemplates = ({ onApply }: CronTemplatesProps) => {
           <Card
             key={index}
             className="p-4 bg-muted/20 hover:bg-muted/40 transition-colors border-0 cursor-pointer group w-full h-28"
-            onClick={() => onApply(template.settings)}
+            onClick={() => {
+              onApply(template.settings);
+              triggerApplied(index);
+            }}
           >
             <div className="flex items-center justify-between h-full">
               {/* Left side: Icon + Name + Description */}
@@ -130,7 +153,17 @@ export const CronTemplates = ({ onApply }: CronTemplatesProps) => {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="opacity-100 transition-opacity"
+                      className={`opacity-100 transition-all duration-150 ease-in-out ${
+                        appliedIndex === index
+                          ? "bg-slate-200 text-slate-800 transform scale-95 shadow-sm"
+                          : "bg-white text-slate-700 hover:bg-slate-100 hover:scale-105"
+                      }`}
+                      onClick={(e) => {
+                        // prevent card click from firing twice
+                        e.stopPropagation();
+                        onApply(template.settings);
+                        triggerApplied(index);
+                      }}
                     >
                       Apply
                     </Button>
