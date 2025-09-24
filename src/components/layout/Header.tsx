@@ -49,7 +49,7 @@ export const Header = () => {
               asChild
             >
               <a
-                href="https://github.com"
+                href="https://github.com/shinjansarkar/cron-spark"
                 target="_blank"
                 rel="noopener noreferrer"
               >
