@@ -1,6 +1,6 @@
 # ⏰ Cron Job Helper
 
-Cron Job Helper is a simple and intuitive web app built with **HTML, CSS, and JavaScript (React + Tailwind + shadcn/ui)** that helps developers quickly build, understand, and apply cron expressions.  
+Cron Job Helper is a simple and intuitive web app  that helps developers quickly build, understand, and apply cron expressions.  
 It provides **ready-to-use templates** (like "Every 5 minutes", "Daily at Midnight", etc.) as well as a **custom cron builder** for advanced scheduling.
 
 ---
